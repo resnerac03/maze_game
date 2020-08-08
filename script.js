@@ -542,7 +542,7 @@ window.onload = function() {
   };
 
   finishSprite = new Image();
-  finishSprite.src = "images/moisturizer"+
+  finishSprite.src = "images/moisturizer.png"+
   "?" +
   new Date().getTime();
   finishSprite.setAttribute("crossOrigin", " ");
