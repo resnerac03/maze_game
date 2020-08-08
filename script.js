@@ -215,6 +215,9 @@ function DrawMaze(Maze, ctx, cellsize, endSprite = null) {
   var cellSize = cellsize;
   var drawEndMethod;
   ctx.lineWidth = cellSize / 40;
+  // set line color
+  ctx.strokeStyle = '#ffffff';
+  ctx.stroke();
 
   this.redrawMaze = function(size) {
     cellSize = size;
@@ -526,8 +529,7 @@ window.onload = function() {
   };
   sprite = new Image();
   sprite.src =
-    "images/lotion.png" 
-    +
+    "images/lotion.png" +
     "?" +
     new Date().getTime();
   sprite.setAttribute("crossOrigin", " ");
@@ -536,13 +538,14 @@ window.onload = function() {
     completeOne = true;
     console.log(completeOne);
     isComplete();
+    console.log(sprite)
   };
 
   finishSprite = new Image();
-  finishSprite.src = "https://image.ibb.co/b9wqnJ/i_Q7m_U25_Imgur.png"+
+  finishSprite.src = "images/moisturizer"+
   "?" +
   new Date().getTime();
-  finishSprite.setAttribute("crossOrigin", "");
+  finishSprite.setAttribute("crossOrigin", " ");
   finishSprite.onload = function() {
     finishSprite = changeBrightness(1.1, finishSprite);
     completeTwo = true;
